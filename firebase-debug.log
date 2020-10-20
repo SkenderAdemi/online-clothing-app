@@ -1,0 +1,53 @@
+[debug] [2020-10-20T10:22:19.822Z] ----------------------------------------------------------------------
+[debug] [2020-10-20T10:22:19.824Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-10-20T10:22:19.824Z] CLI Version:   8.12.1
+[debug] [2020-10-20T10:22:19.824Z] Platform:      darwin
+[debug] [2020-10-20T10:22:19.825Z] Node Version:  v13.8.0
+[debug] [2020-10-20T10:22:19.826Z] Time:          Tue Oct 20 2020 12:22:19 GMT+0200 (Central European Summer Time)
+[debug] [2020-10-20T10:22:19.826Z] ----------------------------------------------------------------------
+[debug] [2020-10-20T10:22:19.826Z] 
+[debug] [2020-10-20T10:22:19.831Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-20T10:22:19.831Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/macbookpro2014/Documents/personal/online-shop
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-10-20T10:23:06.700Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-20T10:23:06.700Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-20T10:23:07.059Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 20 Oct 2020 10:22:32 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-20T10:23:07.074Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-10-20T10:23:07.683Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 20 Oct 2020 10:22:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  Using project online-clothing-f74ad (online-clothing) 
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2020-10-20T10:23:53.048Z] >>> HTTP REQUEST GET https://online-clothing-f74ad.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2020-10-20T10:23:54.257Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Tue, 20 Oct 2020 10:23:19 GMT","content-type":"application/json; charset=utf-8","content-length":"161","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[debug] [2020-10-20T10:23:54.569Z] Error: EISDIR: illegal operation on a directory, open '/Users/macbookpro2014/Documents/personal/online-shop'
+    at Object.openSync (fs.js:457:3)
+    at Object.writeFileSync (fs.js:1298:35)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:156:8)
+    at /usr/local/lib/node_modules/firebase-tools/lib/init/features/database.js:25:23
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -9,11 +9,37 @@ import AuthPage from './pages/auth/auth.component';
 
 import Header from './layouts/header/header.component';
 
-function App() {
+import { auth } from './firebase/firebase.utils'; 
 
+class App extends React.Component {
+
+  constructor(){
+    super()
+    this.state = {
+      currentUser: null
+    }
+  }
+
+  subscribtionFromAuth = null;
+
+  componentDidMount() {
+    this.subscribtionFromAuth = auth.onAuthStateChanged(user => {
+        this.setState({currentUser: user});
+
+        console.log(user);
+      })
+  }
+
+  componentWillUnmount() {
+    // unsubscribing whenever component unmount 
+    this.subscribtionFromAuth();
+  }
+
+render() {
+  const {currentUser} = this.state;
   return (
     <div>
-      <Header />
+      <Header currentUser={currentUser}/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
@@ -21,6 +47,8 @@ function App() {
       </Switch>
     </div>
   );
+
+}
 }
 
 export default App;
